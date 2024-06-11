@@ -76,19 +76,19 @@ function getEventUrl() {
 }
 
 function getPullRequestUrl() {
-    const url = payload.pull_request?.url;
+    const url = payload.pull_request?.html_url;
     checkValue(url, 'URL', 'pull request');
     return url;
 }
 
 function getCommentUrl() {
-    const url = payload.comment?.url
+    const url = payload.comment?.html_url
     checkValue(url, 'URL', 'comment');
     return url;
 }
 
 function getIssueUrl() {
-    const url = payload.issue?.url;
+    const url = payload.issue?.html_url;
     checkValue(url, 'URL', 'issue');
     return url;
 }
